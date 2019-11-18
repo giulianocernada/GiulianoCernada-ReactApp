@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Tile from './components/Tile';
+import Tiles from './components/Tile';
 
 function App() {
   return (
     <div>
-      <Tile />
-      <Tile primary><p>Hola</p></Tile>
+      <Tiles />
+      <Tiles>Hola</Tiles>
     </div>
   );
 }
