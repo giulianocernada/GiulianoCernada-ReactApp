@@ -11,18 +11,24 @@ flex-wrap: wrap;
   }
 `
 
-const sections = ['Giuliano Cernada', 'About', 'Contact'];
+const sections = [
+	{name: 'Giuliano Cernada', color: null},
+	{name: 'Proyectos', color: 'rgba(224, 156 ,158 , 0.9)'},
+	{name: 'Visualización', color: 'rgba(210, 120 ,70 , 0.9)'},
+	{name: 'Documentación', color: 'rgba(100, 150 ,190 , 0.9)'},
+	{name: 'Fotografía', color: 'rgba(120, 140 ,80 , 0.9)'},
+	{name: 'Acerca de', color: 'rgba(220, 160 ,60 , 0.9)'},
+	{name: 'Contacto', color: 'rgba(170, 160 ,80 , 0.9)'},
+	];
 
-const Tiles2 = () => (
+const TilesGroup = () => (
 	<Tiles>
-		<Tile primary>Giuliano Cernada</Tile>
-		<Tile>Hola</Tile>
-		<Tile>Hola</Tile>
-		<Tile>Hola</Tile>
-		<Tile>Hola</Tile>
-		<Tile>Hola</Tile>
-		<Tile>Hola</Tile>
+		{sections.map(section => {
+			return section.name === 'Giuliano Cernada' ? 
+			<Tile primary bgColor={section.color}>{section.name}</Tile> :
+			<Tile bgColor={section.color}>{section.name}</Tile>
+		})}
 	</Tiles>
 );
 
-export default Tiles2;
+export default TilesGroup;
