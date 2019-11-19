@@ -6,7 +6,13 @@ const Tiles = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+@media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
+
+const sections = ['Giuliano Cernada', 'About', 'Contact'];
+
 const Tiles2 = () => (
 	<Tiles>
 		<Tile primary>Giuliano Cernada</Tile>
