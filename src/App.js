@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import TilesGroup from './containers/Tiles/Tiles';
+import LandingPage from './containers/Landing/Landing';
 
 function App() {
   return (
-  	<TilesGroup />
+  	<LandingPage />
   );
 }
 
