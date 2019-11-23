@@ -4,11 +4,12 @@ import Tile from '../../components/Tile/Tile';
 
 const Tiles = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: colum;
 flex-wrap: wrap;
-@media (max-width: 768px) {
-    flex-direction: column;
-  }
+
+@media (min-width: 1024px) {
+    flex-direction: row;
+}
 `
 
 const sections = [

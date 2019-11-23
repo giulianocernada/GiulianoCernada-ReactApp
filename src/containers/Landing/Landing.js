@@ -10,7 +10,14 @@ height: 100vh;
 background-image: url(${BackgroundImage});
 background-size: cover;
 background-position: center;
+position: relative;
+
+@media (min-width: 720px) {
+
+}
 `
+
+// MEDIA QUERIES: 0-320, 320-720, 720-1024
 
 class LandingPage extends Component {
 	state = {

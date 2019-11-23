@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const Side = styled.div`
     position: fixed;
-    width: 25vw;
-    max-width: 80%;
+    width: 100vw;
     height: 100%;
     right: 0;
     top: 0;
