@@ -16,12 +16,13 @@ const Side = styled.div`
     box-sizing: border-box;
     transition: transform 0.5s ease-out;
     transform: ${props => props.open === true ? 'translateX(0)' : 'translateX(100%)'};
+    cursor: pointer;
 `
 
 const Sidebar = (props) => {
 	return (
 		<Side open={props.open}>
-			<a navToggleClicked={this.SideNavToggleHandler}>Cerrar</a>
+			<div onClick={props.closed}>Cerrar</div>
 			<h1>{props.title}</h1>
 		</Side>
 	)	
