@@ -12,23 +12,23 @@ flex-wrap: wrap;
 `
 
 const sections = [
-	{name: 'Giuliano Cernada', color: null},
-	{name: 'Proyectos', color: 'rgba(224, 156 ,158 , 0.9)'},
-	{name: 'Visualización', color: 'rgba(210, 120 ,70 , 0.9)'},
-	{name: 'Documentación', color: 'rgba(100, 150 ,190 , 0.9)'},
-	{name: 'Fotografía', color: 'rgba(120, 140 ,80 , 0.9)'},
-	{name: 'Acerca de', color: 'rgba(220, 160 ,60 , 0.9)'},
-	{name: 'Contacto', color: 'rgba(170, 160 ,80 , 0.9)'},
+	{name: 'Giuliano Cernada', key:'1', color: null},
+	{name: 'Proyectos', key:'2', color: 'rgba(224, 156 ,158 , 0.9)'},
+	{name: 'Visualización', key:'3', color: 'rgba(210, 120 ,70 , 0.9)'},
+	{name: 'Documentación', key:'4', color: 'rgba(100, 150 ,190 , 0.9)'},
+	{name: 'Fotografía', key:'5', color: 'rgba(120, 140 ,80 , 0.9)'},
+	{name: 'Acerca de', key:'6', color: 'rgba(220, 160 ,60 , 0.9)'},
+	{name: 'Contacto', key:'7', color: 'rgba(170, 160 ,80 , 0.9)'},
 	];
 
 const TilesGroup = (props) => (
 	<Tiles>
 		{sections.map(section => {
 			return section.name === 'Giuliano Cernada' ? 
-			<Tile primary bgColor={section.color}>{section.name}</Tile> :
+			<Tile primary bgColor={section.color} key={section.key}>{section.name}</Tile> :
 			(section.name === 'Contacto' ?
-			<Tile onClick={props.clicked} bgColor={section.color}>{section.name}</Tile> :
-			<Tile bgColor={section.color}>{section.name}</Tile>
+			<Tile onClick={props.clicked} bgColor={section.color} key={section.key}>{section.name}</Tile> :
+			<Tile bgColor={section.color} key={section.key}>{section.name}</Tile>
 			);
 		})}
 	</Tiles>

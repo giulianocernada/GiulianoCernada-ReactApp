@@ -2,15 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Side = styled.div`
-height: 100vh;
-width: 25vw;
-background-color: ${props => props.shown ? 'blue' : 'red'};
+    position: fixed;
+    width: 25vw;
+    max-width: 80%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 100%);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-out;
+    transform: ${props => props.open === true ? 'translateX(0)' : 'translateX(100%)'};
 `
 
-const Sidebar = () => {
+const Sidebar = (props) => {
 	return (
-		<Side shown>
-			<h1>hola</h1>
+		<Side open={props.open}>
+			<a navToggleClicked={this.SideNavToggleHandler}>Cerrar</a>
+			<h1>{props.title}</h1>
 		</Side>
 	)	
 }

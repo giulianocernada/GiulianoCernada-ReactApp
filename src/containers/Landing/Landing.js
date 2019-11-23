@@ -14,7 +14,7 @@ background-position: center;
 
 class LandingPage extends Component {
 	state = {
-		showSidebar: true
+		showSidebar: false
 	}
 
 	SidebarClosedHandler = () => {
@@ -33,7 +33,7 @@ class LandingPage extends Component {
 				<Tiles 
 					clicked={this.SidebarToggleHandler}/>
 				<Sidebar 
-					shown
+					title='holis'
 					open={this.state.showSidebar}
 					closed={this.SidebarClosedHandler} />
 			</Landing>
