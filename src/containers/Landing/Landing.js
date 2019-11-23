@@ -33,7 +33,7 @@ class LandingPage extends Component {
 				<Tiles 
 					clicked={this.SidebarToggleHandler}/>
 				<Sidebar 
-					hola
+					shown
 					open={this.state.showSidebar}
 					closed={this.SidebarClosedHandler} />
 			</Landing>
