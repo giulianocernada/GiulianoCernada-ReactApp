@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Tiles from '../Tiles/Tiles';
+import Sidebar from '../../components/Sidebar/Sidebar';
 import BackgroundImage from '../../assets/BG.jpg';
 
 const Landing = styled.div`
@@ -11,12 +12,33 @@ background-size: cover;
 background-position: center;
 `
 
-const LandingPage = () => {
-	return (
-		<Landing>
-			<Tiles />
-		</Landing>
-	)
+class LandingPage extends Component {
+	state = {
+		showSidebar: true
+	}
+
+	SidebarClosedHandler = () => {
+		this.setState({showSidebar: false});
+	}
+
+	SidebarToggleHandler = () => {
+		this.setState((prevState) =>{
+			return {showSidebar: !prevState.showSidebar}
+		});
+	}
+
+	render(){
+		return (
+			<Landing>
+				<Tiles 
+					clicked={this.SidebarToggleHandler}/>
+				<Sidebar 
+					hola
+					open={this.state.showSidebar}
+					closed={this.SidebarClosedHandler} />
+			</Landing>
+		)
+	}
 }
 
 export default LandingPage;

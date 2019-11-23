@@ -21,12 +21,15 @@ const sections = [
 	{name: 'Contacto', color: 'rgba(170, 160 ,80 , 0.9)'},
 	];
 
-const TilesGroup = () => (
+const TilesGroup = (props) => (
 	<Tiles>
 		{sections.map(section => {
 			return section.name === 'Giuliano Cernada' ? 
 			<Tile primary bgColor={section.color}>{section.name}</Tile> :
+			(section.name === 'Contacto' ?
+			<Tile onClick={props.clicked} bgColor={section.color}>{section.name}</Tile> :
 			<Tile bgColor={section.color}>{section.name}</Tile>
+			);
 		})}
 	</Tiles>
 );
