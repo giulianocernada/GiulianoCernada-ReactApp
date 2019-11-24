@@ -8,13 +8,14 @@ border: 0.25px solid rgba(198, 198, 198, 0.5);
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: ${props => props.primary ? '54px' : '36px'};
+font-size: ${props => props.primary ? '3.5em' : '2.5em'};
 font-weight: bold;
+text-align: right;
 text-shadow: 1px 1px 5px black;
 color: #fff;
 cursor: ${props => props.primary ? 'auto' : 'pointer'};
 box-sizing: border-box;
-padding: 10px;
+padding: 20px;
 user-select: none;
 transition: background-color 0.5s;
 text-align: ${props => props.primary ? 'left' : 'right'};
@@ -25,7 +26,7 @@ text-align: ${props => props.primary ? 'left' : 'right'};
 
 @media (min-width: 720px) {
 	padding: 50px;
-	font-size: ${props => props.primary ? '48px' : '24px'};
+	font-size: ${props => props.primary ? '10em' : '24px'};
 }
 
 @media (min-width: 1024px) {
@@ -34,7 +35,7 @@ text-align: ${props => props.primary ? 'left' : 'right'};
 	align-items: flex-end;
 	justify-content: ${props => props.primary ? 'flex-start' : 'flex-end'};
 	padding: 50px;
-	font-size: ${props => props.primary ? '48px' : '24px'};
+	font-size: ${props => props.primary ? '3em' : '1.5em'};
 }
 `
 
