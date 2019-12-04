@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 const Tile = styled.div`
 background-color: transparent;
-width: 100vw;
-height: ${props => props.primary ? '100vh' : '50vh'};
-border: 0.25px solid rgba(198, 198, 198, 0.5);
+height: 25vh;
+width: ${props => props.primary ? '100vw' : '50vw'};
+border: 0.25px solid rgba(198, 198, 198, 0.3);
 display: flex;
-align-items: center;
-justify-content: center;
-font-size: ${props => props.primary ? '3.5em' : '2.5em'};
+align-items: flex-end;
+justify-content: left;
+font-size: ${props => props.primary ? '3em' : '1.8em'};
 font-weight: bold;
 text-align: right;
 text-shadow: 1px 1px 5px black;
@@ -26,7 +26,7 @@ text-align: ${props => props.primary ? 'left' : 'right'};
 
 @media (min-width: 720px) {
 	padding: 50px;
-	font-size: ${props => props.primary ? '10em' : '24px'};
+	font-size: ${props => props.primary ? '3em' : '1.8em'};
 }
 
 @media (min-width: 1024px) {
